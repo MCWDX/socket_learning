@@ -43,7 +43,6 @@ void Server::launch() {
     socket_.bind(config_["port"]);
     socket_.listen(config_["backlog"]);
 
-    epoll_.create();
     epoll_.add(socket_.getFD(), EPOLLIN);
 
     {

@@ -30,7 +30,6 @@ Client::~Client() {
  */
 void Client::initializeClient() {
     conn_fd_.create();
-    epoll_fd_.create();
 
     connect2Server();
 

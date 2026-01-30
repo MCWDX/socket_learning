@@ -48,7 +48,7 @@ private:
     void broadcast(Client& sender, std::string& message);
     void echoMsg(Client& client, std::string& message);
     void userLogout(Client& client);
-    
+
     void shutdown();
 
     Socket socket_{-1};
