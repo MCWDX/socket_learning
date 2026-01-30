@@ -114,8 +114,7 @@ int main() {
                         epoll_event client_ev;
                         client_ev.data.fd = client_fd;
                         client_ev.events = EPOLLIN;
-                        int ctl_res = epoll_ctl(epfd, EPOLL_CTL_ADD, client_fd, &client_ev);
-                        if (ctl_res == -1) {
+                        if (epoll_ctl(epfd, EPOLL_CTL_ADD, client_fd, &client_ev) == -1) {
                             cout << "Failed to add client_fd to epoll, discard client" << endl;
                             close(client_fd);
                             if (errno == EPERM || errno == ENOENT || errno == EEXIST) {

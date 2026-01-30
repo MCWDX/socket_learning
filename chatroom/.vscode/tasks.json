@@ -1,0 +1,31 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "build",
+			"command": "/usr/bin/g++",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${workspaceFolder}/src/common/epoll.cpp",
+				"${workspaceFolder}/src/common/socket.cpp",
+				"${workspaceFolder}/src/server/server.cpp",
+				"${workspaceFolder}/src/client/client.cpp",
+				"${file}",
+				"-I",
+				"${workspaceFolder}/include",
+				"-o",
+				"${workspaceFolder}/test/unit/${fileBasenameNoExtension}.out"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: /usr/bin/g++"
+		}
+	]
+}

@@ -1,0 +1,4 @@
+cmake_minimum_required(3.18)
+project(chatroom)
+set(CXX_STANDARD 17)
+set(CXX_STANDARD_REQUIRED ON)
